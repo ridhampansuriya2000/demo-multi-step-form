@@ -43,3 +43,5 @@ Ensure you have the following installed on your system:
    ```sh
    git clone https://github.com/ridhampansuriya2000/demo-multi-step-form.git
    cd demo-multi-step-form
+   npm install --force
+   npm run dev

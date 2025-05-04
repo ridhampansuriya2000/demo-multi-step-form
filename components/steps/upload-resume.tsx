@@ -103,7 +103,7 @@ export default function UploadResume() {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <h2 className="text-2xl font-medium text-gray-800 mb-8 sm:text-xl">Upload Resume</h2>
+      <h2 className="text-2xl font-medium text-gray-800 mb-3 md:mb-8 sm:text-xl">Upload Resume</h2>
 
       <div
         className={`border-2 border-dashed rounded-lg p-8 flex flex-col items-center justify-center lg:w-1/2 w-full

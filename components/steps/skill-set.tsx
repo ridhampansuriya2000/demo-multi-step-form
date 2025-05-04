@@ -5,7 +5,15 @@ import { useFormContext } from "@/context/form-context"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { X, GripVertical } from "lucide-react"
-import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from "@dnd-kit/core"
+import {
+  DndContext,
+  closestCenter,
+  KeyboardSensor,
+  PointerSensor,
+  useSensor,
+  useSensors,
+  TouchSensor
+} from "@dnd-kit/core"
 import {
   SortableContext,
   sortableKeyboardCoordinates,
@@ -60,6 +68,7 @@ export default function SkillSet() {
   const [error, setError] = useState("")
 
   const sensors = useSensors(
+    useSensor(TouchSensor),
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,

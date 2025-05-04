@@ -35,7 +35,7 @@ export default function ProgressBar() {
           <div
             key={step.id}
             className="flex flex-col items-center relative z-10"
-            // onClick={() => handleStepClick(step.id)}
+            onClick={() => handleStepClick(step.id)}
           >
             <div
               className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center cursor-pointer

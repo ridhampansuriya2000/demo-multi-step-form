@@ -35,8 +35,8 @@ export default function Summary() {
     <div className="max-w-6xl mx-auto">
       <h2 className="text-xl md:text-2xl font-medium text-gray-800 mb-6 md:mb-14">Summary</h2>
 
-      <div className="mb-14">
-        <h3 className="text-lg font-medium text-gray-700 mb-9 border-t border-gray-200 pt-14">Resume</h3>
+      <div className="mb-7 md:mb-14">
+        <h3 className="text-lg font-medium text-gray-700 mb-9 border-t border-gray-200 pt-7 md:pt-14">Resume</h3>
         <div className="flex justify-between">
           <div>
             <p className="text-sm text-gray-500">File name</p>
@@ -52,8 +52,8 @@ export default function Summary() {
         </div>
       </div>
 
-      <div className="mb-14">
-        <h3 className="text-lg font-medium text-gray-700 mb-9 border-t border-gray-200 pt-14">Basic Information</h3>
+      <div className="mb-7 md:mb-14">
+        <h3 className="text-lg font-medium text-gray-700 mb-9 border-t border-gray-200 pt-7 md:pt-14">Basic Information</h3>
         <div className="grid grid-cols-2 md:grid-cols-2 gap-6 w-full md:w-2/3 ">
           <div>
             <p className="text-sm text-gray-500">First Name</p>
@@ -74,8 +74,8 @@ export default function Summary() {
         </div>
       </div>
 
-      <div className="mb-14">
-        <h3 className="text-lg font-medium text-gray-700 mb-9 border-t border-gray-200 pt-14">Skill Sets</h3>
+      <div className="mb-7 md:mb-14">
+        <h3 className="text-lg font-medium text-gray-700 mb-9 border-t border-gray-200 pt-7 md:pt-14">Skill Sets</h3>
         <div>
           {formData.skills?.map((skill, index) => (
             <div key={skill.id} className="mb-4  w-full md:w-2/3 ">
@@ -94,8 +94,8 @@ export default function Summary() {
         </div>
       </div>
 
-      <div className="mb-8">
-        <h3 className="text-lg font-medium text-gray-700 mb-9 border-t border-gray-200 pt-14">Education</h3>
+      <div className="mb-7 md:mb-14">
+        <h3 className="text-lg font-medium text-gray-700 mb-9 border-t border-gray-200 pt-7 md:pt-14">Education</h3>
         <div>
           {formData.education?.map((edu, index) => (
             <div key={edu.id} className="mb-6">
@@ -122,7 +122,7 @@ export default function Summary() {
         </div>
       </div>
 
-      <div className="mb-14 border-t border-gray-200 pt-14">
+      <div className="mb-14 border-t border-gray-200 pt-8 md:pt-14">
         <p className="text-sm text-gray-600 mb-4">
           By submitting this form, you confirm that all information provided is accurate and complete to the best of
           your knowledge. Any false or misleading information may result in disqualification from the recruitment

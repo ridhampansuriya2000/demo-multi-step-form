@@ -36,9 +36,9 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       <Header />
-      <div className="container mx-auto px-8 pb-8 pt-14 max-w-6xl">
+      <div className="container mx-auto px-8 pb-8 pt-4 md:pt-14 max-w-6xl">
         <ProgressBar />
-        <div className="mt-12 pt-[56px]">{renderStep()}</div>
+        <div className="mt-12 pt-5 md:pt-[56px]">{renderStep()}</div>
       </div>
     </main>
   )

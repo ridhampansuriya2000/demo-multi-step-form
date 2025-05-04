@@ -3,8 +3,8 @@ import React from "react";
 
 const PdfIcon = (props : React.SVGProps<SVGSVGElement>) => (
     <svg
-        width="56"
-        height="54"
+        width={props.width || "56"}
+        height={props.height || "56"}
         viewBox="0 0 56 54"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

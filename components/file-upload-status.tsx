@@ -5,6 +5,7 @@ import PdfIcon from "@/components/icons/pdf-icon";
 import ProcessingIcon from "@/components/icons/processing-icon";
 import CompletedIcon from "@/components/icons/complated-icon";
 import CancelButton from "@/components/icons/cancel-icon";
+import {useIsMobile} from "@/hooks/use-mobile";
 
 interface FileUploadStatusProps {
     file: File
@@ -14,6 +15,9 @@ interface FileUploadStatusProps {
 }
 
 export default function FileUploadStatus({file, status, progress = 100, onRemove}: FileUploadStatusProps) {
+
+    const isMobile = useIsMobile()
+
     const formatFileSize = (bytes: number) => {
         if (bytes < 1024) return bytes + " B"
         const kb = bytes / 1024
@@ -32,7 +36,7 @@ export default function FileUploadStatus({file, status, progress = 100, onRemove
         <div className="mt-4 bg-orange-50 rounded-lg p-4">
             <div className="flex justify-between">
                 <div className="flex items-center">
-                    <PdfIcon/>
+                    <PdfIcon width={isMobile ? '45' : '56'} height={isMobile ? '45' : '56'} />
                     <div className="ml-4">
                         <p className="text-gray-800">{file.name}</p>
                         <div className="flex items-center text-sm text-gray-500">
@@ -62,7 +66,7 @@ export default function FileUploadStatus({file, status, progress = 100, onRemove
                         <CancelButton onClick={onRemove} />
                         :
                         <button onClick={onRemove} className="text-gray-400 hover:text-red-500">
-                            <Trash2Icon className="w-5 h-5 text-red-500"/>
+                            <Trash2Icon className="w-4 h-4 md:w-5 md:h-5  text-red-500"/>
                         </button>
                     }
                 </div>
